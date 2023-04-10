@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('content')
 
 
@@ -128,19 +128,19 @@
 		<div class="container">
 			<div class="row text-left stat-wrap">
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-study"></i></span>
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="fa-solid fa-book-open-reader"></i></span>
 					<p class="stat_count">12000</p>
 					<h3>Students</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-online"></i></span>
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="fa-solid fa-chalkboard-user"></i></span>
 					<p class="stat_count">240</p>
 					<h3>Courses</h3>
 				</div><!-- end col -->
 
 				<div class="col-md-4 col-sm-4 col-xs-12">
-					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-years"></i></span>
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="fa-sharp fa-solid fa-calendar-days"></i></i></span>
 					<p class="stat_count">55</p>
 					<h3>Years Completed</h3>
 				</div><!-- end col -->
@@ -159,8 +159,8 @@
                 <div class="col-md-6 offset-md-3">
                     <div class="message-box">
                         <ul class="nav nav-pills nav-stacked" id="myTabs">
-                            <li><a class="active" href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
-                            <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
+                            <li><a class="active" href="#tab1" data-toggle="pill" >Monthly Subscription</a></li>
+                            <li><a href="#tab2" data-toggle="pill" >Yearly Subscription</a></li>
                         </ul>
                     </div>
                 </div><!-- end col -->

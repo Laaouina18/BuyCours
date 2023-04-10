@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
@@ -53,15 +66,28 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div class="tab-pane active" id="Login">
-						<form role="form" class="form-horizontal">
+					<form role="form" class="form-horizontal" method="POST" action="{{ route('login') }}">
+                        @csrf
+
+				
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="email1" placeholder="Name" type="text">
+									<input class="form-control" id="email1" placeholder="Name" type="text" required autocomplete="email" name="email" autofocus>
+									@error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" name="password" required autocomplete="current-password">
+									@error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 								</div>
 							</div>
 							<div class="row">
@@ -69,40 +95,60 @@
 									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
 										Submit
 									</button>
-									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+									@if (Route::has('password.request'))
+                                    <a class="for-pwd" href="javascript:;" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+								
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="tab-pane" id="Registration">
-						<form role="form" class="form-horizontal">
+			
+
+						<form role="form" class="form-horizontal" method="POST" action="{{ route('register') }}">
+						@csrf
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" placeholder="Name" type="text">
+									<input class="form-control" placeholder="Name" type="text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+									@error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="email" placeholder="Email" type="email">
+									<input class="form-control" id="email" placeholder="Email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email">
+									@error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+									<input class="form-control" id="password" placeholder="Mobile" type="text" name="password" required autocomplete="new-password">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input class="form-control" id="password" placeholder="Password" type="password">
+									<input class="form-control" id="password" placeholder="Password" type="password" name="password_confirmation" required autocomplete="new-password">
 								</div>
 							</div>
+							
+		
 							<div class="row">							
 								<div class="col-sm-10">
 									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
 										Save &amp; Continue
 									</button>
-									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
-										Cancel</button>
+									<!-- <button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Cancel</button> -->
 								</div>
 							</div>
 						</form>

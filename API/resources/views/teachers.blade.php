@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 @section('content')
 	<!-- Modal -->
     <div class="all-title-box" style="background-image:url('images/POL_2225-min-1024x683-1.jpg');">

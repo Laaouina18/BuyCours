@@ -1609,7 +1609,6 @@ a img.aligncenter {
 	border-radius: 2px;
 }
 
-
 /*------------------------------------------------------------------
     ICON BOXES
 -------------------------------------------------------------------*/
@@ -2837,6 +2836,7 @@ select.mobile-device {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
 }
+
 
 body.host_version .slide-btn.btn-light{
 	background-color: #FF1469 !important;
