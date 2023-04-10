@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 	<!-- Modal -->
-    <div class="all-title-box" style="background-image:url('images/POL_2225-min-1024x683-1.jpg');">
+    <div class="all-title-box" style="background-image:url('images/POL_2225-min-1024x683-1.jpg');height:100vh;">
 		<div class="container text-center">
 			<h1>Teachers<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 		</div>

@@ -3,7 +3,7 @@
 
 
 	
-<div class="all-title-box" style="background-image:url('images/banner.jpg');">
+<div class="all-title-box" style="background-image:url('images/banner.jpg');height:100vh;">
 		<div class="container text-center">
 			<h1>Contact Us<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 		</div>

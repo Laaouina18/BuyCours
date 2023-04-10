@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 	<!-- Modal -->
-	<div class="all-title-box" style="background-image:url('images/world-student-day1.webp');">
+	<div class="all-title-box" style="background-image:url('images/world-student-day1.webp');height:100vh;">
 		<div class="container text-center">
 			<h1>Course 1<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 		</div>
@@ -165,96 +165,14 @@
 										</div>
 									</div>
 									<ul class="children">
-										<li class="comment">
-											<div class="avatar"><img alt="" src="images/avatar-03.jpg" class="avatar"></div>
-											<div class="comment-container">
-												<h5 class="comment-author"><a href="#">Thomas Smith</a></h5>
-												<div class="comment-meta"><a href="#" class="comment-date link-style1">February 14, 2015</a><a class="comment-reply-link link-style3" href="#respond">Reply »</a></div>
-												<div class="comment-body">
-													<p>Labores pertinax theophrastus vim an. Error ditas in sea, per no omnis iisque nonumes. Est an dicam option, ad quis iriure saperet nec, ignota causae inciderint ex vix. Iisque qualisque imp duo eu, pro reque consequ untur. No vero laudem legere pri, error denique vis ne, duo iusto bonorum.</p>
-												</div>
-											</div>
-										</li>
+										
 									</ul>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="comments-form">
-						<h4>Leave a comment</h4>
-						<div class="comment-form-main">
-							<form action="#">
-								<div class="row">
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-name" placeholder="Name" id="commenter-name" type="text">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-email" placeholder="Email" id="commenter-email" type="text">
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<input class="form-control" name="commenter-url" placeholder="Website URL" id="commenter-url" type="text">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="form-group">
-											<textarea class="form-control" name="commenter-message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
-										</div>
-									</div>
-									<div class="col-md-12 post-btn">
-										<button class="hover-btn-new orange"><span>Post Comment</span></button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
 					
-                </div><!-- end col -->
-				<div class="col-lg-3 col-12 right-single">
-					<div class="widget-search">
-						<div class="site-search-area">
-							<form method="get" id="site-searchform" action="#">
-								<div>
-									<input class="input-text form-control" name="search-k" id="search-k" placeholder="Search keywords..." type="text">
-									<input id="searchsubmit" value="Search" type="submit">
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="widget-categories">
-						<h3 class="widget-title">Categories</h3>
-						<ul>
-							<li><a href="#">Political Science</a></li>
-							<li><a href="#">Business Leaders Guide</a></li>
-							<li><a href="#">Become a Product Manage</a></li>
-							<li><a href="#">Language Education</a></li>
-							<li><a href="#">Micro Biology</a></li>
-							<li><a href="#">Social Media Management</a></li>
-						</ul>
-					</div>
-					<div class="widget-tags">
-						<h3 class="widget-title">Search Tags</h3>
-						<ul class="tags">
-							<li><a href="#"><b>business</b></a></li>
-							<li><a href="#"><b>jquery</b></a></li>
-							<li><a href="#">corporate</a></li>
-							<li><a href="#">portfolio</a></li>
-							<li><a href="#">css3</a></li>
-							<li><a href="#"><b>theme</b></a></li>
-							<li><a href="#"><b>html5</b></a></li>
-							<li><a href="#"><b>mysql</b></a></li>
-							<li><a href="#">multipurpose</a></li>
-							<li><a href="#">responsive</a></li>
-							<li><a href="#">premium</a></li>
-							<li><a href="#">javascript</a></li>
-							<li><a href="#"><b>Best jQuery</b></a></li>
-						</ul>
-					</div>
-				</div>
+                </div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->

@@ -67,7 +67,7 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="inner-hmv">
-						<div class="icon-box-hmv"><i class="flaticon-achievement"></i></div>
+						<div class="icon-box-hmv"><i class="fa-solid fa-plane-circle-check"></i></div>
 						<h3>Mission</h3>
 						<div class="tr-pa">M</div>
 						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
@@ -76,7 +76,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="inner-hmv">
-						<div class="icon-box-hmv"><i class="flaticon-eye"></i></div>
+						<div class="icon-box-hmv"><i class="fa-regular fa-eye"></i></div>
 						<h3>Vision</h3>
 						<div class="tr-pa">V</div>
 						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
@@ -85,7 +85,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="inner-hmv">
-						<div class="icon-box-hmv"><i class="flaticon-history"></i></div>
+						<div class="icon-box-hmv"><i class="fa-solid fa-landmark"></i></div>
 						<h3>History</h3>
 						<div class="tr-pa">H</div>
 						<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
