@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MatiereController;
+use App\Http\Controllers\MaitreController;
+use App\Http\Controllers\CoursController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::resource('/matiere',MatiereController::class);
+Route::resource('/maitre',MaitreController::class);
+Route::resource('/cours',CoursController::class);
 Route::get('/', function () {
     return view('Home');
 });
@@ -22,9 +26,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/cours', function () {
-    return view('cours1');
-});
+
 Route::get('/pricing', function () {
     return view('pricing');
 });
