@@ -173,7 +173,7 @@ $cours=cours::find($id);
        
     ]);
 
-    $cours= new cours();
+
         $cours->name = $validatedData['name'];
         $cours->description = $validatedData['description'];
         $cours->date_1 = $validatedData['date_1'];

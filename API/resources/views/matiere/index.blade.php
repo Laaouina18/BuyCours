@@ -10,17 +10,18 @@
                 <div class="card-header">
                     <ul class="nav nav-tabs card-header-tabs">
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('maitre')}}">Enseignants</a>
+                            <a class="nav-link " href="{{url('maitre')}}">Ensegnants</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="{{url('matiere')}}">Matières</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Séances</a>
+                            <a class="nav-link" href="{{url('formation')}}">Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="">Formations</a>
+                            <a class="nav-link" href="{{url('cours')}}">Cours</a>
                         </li>
+                       
                     </ul>
                 </div>
                

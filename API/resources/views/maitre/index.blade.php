@@ -10,25 +10,26 @@
                 <div class="card-header">
                     <ul class="nav nav-tabs card-header-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active " href="{{url('maaitre')}}">Enseignants</a>
+                            <a class="nav-link active" href="{{url('maitre')}}">Ensegnants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('matiere')}}">Matières</a>
+                            <a class="nav-link" href="{{url('matiere')}}">Matières</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Séances</a>
+                            <a class="nav-link  " href="{{url('formation')}}">Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="">Formations</a>
+                            <a class="nav-link" href="{{url('cours')}}">Cours</a>
                         </li>
+                       
                     </ul>
                 </div>
-               
     <div class="row">
         <div class="col-md-10" style="margin:auto;padding-top:10%">
  
     <div class="table-responsive mt-4">
         <table class="table table-striped table-hover">
+        <caption>La liste des maitres</caption>
             <thead>
                 <tr>
                     <th>#</th>
@@ -37,7 +38,7 @@
                     <th>Image</th>
                     <th>Mobile</th>
                     <th>Email</th>
-                    
+                    <th>action</th>
                 </tr>
             </thead>
             <tbody>

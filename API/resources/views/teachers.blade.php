@@ -89,10 +89,12 @@
 	<div id="teachers" class="section wb">
         <div class="container">
             <div class="row">
+			@foreach($maitre as $item)
+                @if($item->name!=NULL)
 				<div class="col-lg-3 col-md-6 col-12">
 					<div class="our-team">
 						<div class="team-img">
-							<img src="images/team-01.png">
+							<img src="{{ asset('storage/images/'.$item->image)}}">
 							<div class="social">
 								<ul>
 									<li><a href="#" class="fa fa-facebook"></a></li>
@@ -103,151 +105,13 @@
 							</div>
 						</div>
 						<div class="team-content">
-							<h3 class="title">Williamson</h3>
-							<span class="post">Web Developer</span>
+							<h3 class="title">{{$item->name}}</h3>
+						
 						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-02.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-03.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Steve Thomas</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-04.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Miranda joy</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-01.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Williamson</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-02.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Kristiana</h3>
-							<span class="post">Web Designer</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-03.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Steve Thomas</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="our-team">
-						<div class="team-img">
-							<img src="images/team-04.png">
-							<div class="social">
-								<ul>
-									<li><a href="#" class="fa fa-facebook"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-skype"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="team-content">
-							<h3 class="title">Miranda joy</h3>
-							<span class="post">Web Developer</span>
-						</div>
-					</div>
-				</div>
+				@endif
+                @endforeach
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->	
@@ -368,68 +232,5 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>About US</h3>
-                        </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                        <div class="footer-right">
-							<ul class="footer-links-soi">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-github"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul><!-- end links -->
-						</div>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-				<div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Information Link</h3>
-                        </div>
-                        <ul class="footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Pricing</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-				
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Contact Details</h3>
-                        </div>
-
-                        <ul class="footer-links">
-                            <li><a href="mailto:#">info@yoursite.com</a></li>
-                            <li><a href="#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+61 3 8376 6284</li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-				
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
-
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-center">                   
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a> Design By : <a href="https://html.design/">html design</a></p>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
+ 
 @endsection

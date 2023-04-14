@@ -21,10 +21,10 @@
                             <a class="nav-link" href="{{url('matiere')}}">Matières</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{{url('formation')}}">Formations</a>
+                            <a class="nav-link  active" href="{{url('formation')}}">Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{url('cours')}}">Cours</a>
+                            <a class="nav-link" href="{{url('cours')}}">Cours</a>
                         </li>
                        
                     </ul>
@@ -33,19 +33,19 @@
     <div class="row">
         <div class="col-md-10" style="margin:auto;padding-top:10%">
 
-            <a href="{{ url('/cours/create') }}" class="btn btn-info">Ajouter cours</a>
+            <a href="{{ url('/formation/create') }}" class="btn btn-info">Ajouter formation</a>
             <br><br>
 
             <div class="table-responsive">
                 <table class="table table-striped">
-                    <caption>La liste des cours</caption>
+                    <caption>La liste des formations</caption>
                     <thead>
                         <tr>
         <th scope="col">#</th>
           <th scope="col">Titre</th>
          
           <th scope="col">Maitre</th>
-          <th scope="col">Matière</th>
+          <th scope="col">description</th>
           <th scope="col">Image</th>
          
           <th scope="col">Action
@@ -54,7 +54,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($cours as $c)
+        @foreach($formation as $c)
     
         <tr>
         <td>{{ $loop->iteration }}</td>
@@ -64,15 +64,15 @@
 
 
 
-  <td>{{ $c->matiere->name }}</td>
+  <td>{{ $c->description }}</td>
 
 <td><img src="{{ asset('storage/images/'.$c->image) }}" alt="{{ $c->name }}" width="20"></td>
      
           <td style="display:flex;justify-content:space-around">
                              
-                                <a class="btn btn-sm btn-info"  href=" {{ url('/cours/'.$c->id.'/edit') }}" >Modifier</a>
+                                <a class="btn btn-sm btn-info"  href=" {{ url('/formation/'.$c->id.'/edit') }}" >Modifier</a>
                                 @if($c->status != 'archived')
-    <form action="{{ url('/cours/'.$c->id) }}" method="post" style="display:inline-block;">
+    <form action="{{ url('/formation/'.$c->id) }}" method="post" style="display:inline-block;">
         {{ csrf_field() }}
         {{ method_field('DELETE') }}
                                 
