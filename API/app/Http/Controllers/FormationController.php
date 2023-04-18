@@ -9,7 +9,7 @@ use Illuminate\Validation\Validator;
 use App\Models\formation;
 use App\Models\matiere;
 use App\Models\maitre;
-
+use App\Models\Cours;
 use App\Models\Commentaire;
 use Illuminate\Validation\Rule;
 
@@ -30,7 +30,18 @@ class FormationController extends Controller
         }
     
     }
-
+    public function afficher()
+    { 
+       
+        
+        $formation=formation::all();
+        $maitre = maitre::all();
+        $cours = cours::all();
+      
+        return view('formation', compact('maitre', 'cours','formation'));
+       
+    
+    }
     /**
      * Show the form for creating a new resource.
      * @return\Illuminate\Http\response.

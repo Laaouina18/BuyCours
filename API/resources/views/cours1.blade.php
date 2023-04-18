@@ -2,7 +2,7 @@
 @section('content')
 <div class="all-title-box" style="background-image:url('images/world-student-day1.webp');height:100vh;">
 		<div class="container text-center">
-			<h1>Formations<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+			<h1>2	BAC<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 		</div>
 	</div>
 

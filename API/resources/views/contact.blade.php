@@ -43,12 +43,14 @@
                             </div>
                         </form>
                     </div>
-                </div><!-- end col -->
-				<!-- <div class="col-xl-6 col-md-12 col-sm-12">
-					<div class="map-box">
-						<div id="custom-places" class="small-map">   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15507.232597711677!2d-9.237964572144926!3d32.28875268785696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdae38215289d04f%3A0x4f1a417ca4734e4!2sSafi%2046000%2C%20Morocco!5e0!3m2!1sen!2sus!4v1645738072378!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-					</div>
-				</div> -->
+                </div>
+		<div class="col-xl-6 col-md-12 col-sm-12">
+				<iframe width="560" height="430" 
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;
+                hl=en&amp;q=Rosemont+(My%20Business%20Name)&amp;t=&amp;z=14&amp;
+                ie=UTF8&amp;iwloc=B&amp;output=embed" 
+                frameborder="0" allowfullscreen></iframe>
+
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->

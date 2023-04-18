@@ -59,7 +59,7 @@
                            
                         </div>
                  
-                        <input type="hidden" class="form-control item" id="name" name="role"  value="maitre" >
+                        <input type="hidden" class="form-control item" id="name" name="role"  value="student" >
                         <div class="form-group">
                 <button type="submit"  class="btn btn-block create-account">Create Account</button>
             </div>

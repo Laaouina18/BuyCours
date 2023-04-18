@@ -13,7 +13,7 @@ use App\Models\maitre;
 use App\Models\Commentaire;
 use Illuminate\Validation\Rule;
 
-class TeachersController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,10 +21,8 @@ class TeachersController extends Controller
      */
     public function index()
     { 
-      
-        
-        $maitre=maitre::all();
-        return view('teachers')->with('maitre',$maitre);
-     
+       
+        return view('about');}
+   
+    
     }
-   }

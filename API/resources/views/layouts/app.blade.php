@@ -54,26 +54,20 @@
                 
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="">About Us</a></li>
+						<li class="nav-item "><a class="nav-link" href="{{route('home')}}">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course </a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="">Course Grid 2 </a>
-								<a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
-								<a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
+								<a class="dropdown-item" href="{{('coursniveau')}}">2bac</a>
+								<a class="dropdown-item" href="course-grid-3.html">1bac</a>
+								<a class="dropdown-item" href="course-grid-4.html">TC</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="">Blog </a>
-								<a class="dropdown-item" href="">Blog single </a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="">Teachers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('forma')}}">Formations</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{route('teachers')}}">Teachers</a></li>
 						<li class="nav-item"><a class="nav-link" href="">Pricing</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ route('contact')}}">Contact</a></li>
 					</ul>
                        <!-- Right Side Of Navbar -->
                        <ul class="navbar-nav ms-auto">
@@ -87,7 +81,7 @@
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('profile') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -115,10 +109,9 @@
 			</div>
 		</nav>
 	</header>
-        <main class="">
+        <main class="" style="width:100%">
             @yield('content')
-        </main>
-
+      
         <footer class="footer">
         <div class="container">
             <div class="row">
@@ -146,11 +139,11 @@
                             <h3>Information Link</h3>
                         </div>
                         <ul class="footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Pricing</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
+                            <li><a href="{{route('forma')}}">Formations</a></li>
+                            <li><a href="">Pricing</a></li>
+							<li><a href="{{ route('about') }}">About</a></li>
+							<li><a href="{{ route('contact')}}">Contact</a></li>
                         </ul><!-- end links -->
                     </div><!-- end clearfix -->
                 </div><!-- end col -->

@@ -2,7 +2,7 @@
 @section('content')
 <div class="all-title-box" style="background-image:url('images/world-student-day1.webp');height:100vh;">
 		<div class="container text-center">
-			<h1>Course 1<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+			<h1>Formations<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 		</div>
 	</div>
 
@@ -94,10 +94,11 @@
             <hr class="invis"> 
 
             <div class="row"> 
+				@foreach($formation as $item)
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="blog-item">
 						<div class="image-blog">
-							<img src="images/blog_1.jpg" alt="" class="img-fluid">
+							<img src="{{ asset('storage/images/'.$item->image)}}" alt="" class="img-fluid" style="width:100%">
 						</div>
 						<div class="meta-info-blog">
 							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
@@ -105,131 +106,29 @@
                             <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
 						</div>
 						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
+							<h2><a href="#" title="">{{$item->name}}</a></h2>
 						</div>
 						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							<p>{{$item->description}} </p>
 						</div>
+						<div class="d-flex justify-content-between">
+					
+						<div class="blog-button">
+							<a class="hover-btn-new orange" href="#"><span>Inscrir<span></a>
+					
+						</div>
+				
 						<div class="blog-button">
 							<a class="hover-btn-new orange" href="#"><span>Read More<span></a>
+			
+						</div>
 						</div>
 					</div>
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
-						<div class="image-blog">
-							<img src="images/blog_2.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
-						</div>
-					</div>
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
-						<div class="image-blog">
-							<img src="images/blog_3.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
-						</div>
-					</div>
-                </div><!-- end col -->
+                </div>
+				@endforeach
             </div><!-- end row -->
 
-            <hr class="hr3"> 
-
-            <div class="row"> 
-                <div class="col-lg-4 col-md-6 col-12">
-                   <div class="blog-item">
-						<div class="image-blog">
-							<img src="images/blog_4.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
-						</div>
-					</div>
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
-						<div class="image-blog">
-							<img src="images/blog_5.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
-						</div>
-					</div>
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-item">
-						<div class="image-blog">
-							<img src="images/blog_6.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="meta-info-blog">
-							<span><i class="fa fa-calendar"></i> <a href="#">May 11, 2015</a> </span>
-                            <span><i class="fa fa-tag"></i>  <a href="#">News</a> </span>
-                            <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
-						</div>
-						<div class="blog-title">
-							<h2><a href="#" title="">perferendis doloribus asperiores.</a></h2>
-						</div>
-						<div class="blog-desc">
-							<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
-						</div>
-						<div class="blog-button">
-							<a class="hover-btn-new orange" href="#"><span>Read More</span></a>
-						</div>
-					</div>
-                </div><!-- end col -->
-            </div><!-- end row -->
+         
         </div><!-- end container -->
     </div><!-- end section -->
 

@@ -21,13 +21,11 @@ class CoursniveauController extends Controller
      */
     public function index()
     { 
-        if(auth()->user()){
+     
         
         $cours=cours::all();
-        return view('cours1')->with('cours',$cours);}
-        else{
-            return view('auth.login');
-        }
+        return view('cours1')->with('cours',$cours);
+      
     
     }
 
