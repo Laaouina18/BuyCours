@@ -57,7 +57,7 @@ return view('auth.login');
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string|max:255',
-         
+         "status" => "string",
             'image' => 'nullable',
             'date_1' => 'required|string|max:255',
             'date_2' => 'required|string|max:255',
@@ -78,6 +78,7 @@ return view('auth.login');
         $cours->date_2 = $validatedData['date_2'];
         $cours->date_3 = $validatedData['date_3'];
         $cours->niveau = $validatedData['niveau'];
+        $cours->status = $validatedData['status'];
      
         $cours->maitre_id = $validatedData['maitre_id'];
         $cours->matiere_id = $validatedData['matiere_id'];

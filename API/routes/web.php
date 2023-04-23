@@ -8,6 +8,8 @@ use App\Http\Controllers\CoursniveauController;
 use App\Http\Controllers\FormationController;
 use App\Http\Controllers\TeachersController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\MCoursController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +25,7 @@ use App\Http\Controllers\AboutController;
 Route::resource('/matiere',MatiereController::class);
 Route::resource('/maitre',MaitreController::class);
 Route::resource('/cours',CoursController::class);
+Route::resource('/Mcours',MCoursController::class);
 Route::resource('/formation',FormationController::class);
 
 Route::resource('/coursniveau',CoursniveauController::class);
@@ -69,3 +72,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/teachers', [App\Http\Controllers\TeachersController::class, 'index'])->name('teachers');
 Route::get('/forma', [App\Http\Controllers\FormationController::class, 'afficher'])->name('forma');
+Route::post('/inscription', [InscriptionController::class, 'store'])->name('inscription.store');
+Route::get('/createcours', [MCoursController::class, 'create'])->name('createcours');

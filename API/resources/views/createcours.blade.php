@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1 class="mb-5">Ajouter un cours</h1>
-    <form action="{{ url('cours') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ url('Mcours') }}" method="POST" enctype="multipart/form-data">
         {!! csrf_field() !!}
 
         <div class="mb-3">
@@ -39,15 +39,9 @@
             <label for="duration" class="form-label">Niveau</label>
             <input type="text" name="niveau" id="duration" class="form-control" required>
         </div>
-        <input type="hidden" name="status" id="duration" value="valide" required>
-        <div class="mb-3">
-            <label for="genre_id" class="form-label">Enseignant</label>
-            <select name="maitre_id" id="genre_id" class="form-control" required>
-                @foreach ($maitre as $m)
-                <option value="{{ $m->id }}">{{ $m->name }}</option>
-                @endforeach
-            </select>
-        </div>
+        <input type="hidden" name="status" id="duration" value="en cours" required>
+     
+   <input type="hidden" name="maitre_id" value="{{ auth()->user()->id }}" required>
 
         <div class="mb-3">
             <label for="artist_id" class="form-label">La matière</label>

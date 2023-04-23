@@ -15,7 +15,9 @@
                 </div>
             </div><!-- end title -->
 
-            <hr class="invis"> 
+            <hr class="invis">
+			<a href="{{ route('createcours') }}" class="btn btn-info">Ajouter cours</a>
+
 			<div class="row">
 			@foreach($cours as $c) 
 			
@@ -49,6 +51,12 @@
 								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
 								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
 								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+								<form action="{{ route('inscription.store') }}" method="POST">
+    @csrf
+    <input type="hidden" name="idcours" value="{{ $c->id }}">
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>
+
 							</ul>
 						</div>
 					</div>
