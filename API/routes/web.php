@@ -10,6 +10,7 @@ use App\Http\Controllers\TeachersController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\MCoursController;
+use App\Http\Controllers\DemandesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,7 @@ Route::resource('/maitre',MaitreController::class);
 Route::resource('/cours',CoursController::class);
 Route::resource('/Mcours',MCoursController::class);
 Route::resource('/formation',FormationController::class);
+Route::resource('/demandes',DemandesController::class);
 
 Route::resource('/coursniveau',CoursniveauController::class);
 Route::get('/about', function () {
@@ -74,3 +76,13 @@ Route::get('/teachers', [App\Http\Controllers\TeachersController::class, 'index'
 Route::get('/forma', [App\Http\Controllers\FormationController::class, 'afficher'])->name('forma');
 Route::post('/inscription', [InscriptionController::class, 'store'])->name('inscription.store');
 Route::get('/createcours', [MCoursController::class, 'create'])->name('createcours');
+Route::delete('/demandes/{id}', 'DemandesController@decours')->name('demandes.decours');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/demandes', [App\Http\Controllers\DemandesController::class, 'index'])->name('demandes.index');
+    Route::get('/demandes/editformation/{id}', [App\Http\Controllers\DemandesController::class, 'editformation'])->name('demandes.editformation');
+    Route::get('/demandes/editcours/{id}', [App\Http\Controllers\DemandesController::class, 'editcours'])->name('demandes.editcours');
+    Route::get('/demandes/editinscription/{idetudiant}/{idcours}', [App\Http\Controllers\DemandesController::class, 'editinscription'])->name('demandes.editinscription');
+    Route::delete('/demandes/destroy/{id}', [App\Http\Controllers\DemandesController::class, 'destroy'])->name('demandes.destroy');
+    Route::delete('/demandes/destroyformation/{id}', [App\Http\Controllers\DemandesController::class, 'destroyformation'])->name('demandes.destroyformation');
+    Route::delete('/demandes/destroyinscription/{idetudiant}/{idcours}', [App\Http\Controllers\DemandesController::class, 'destroyinscription'])->name('demandes.destroyinscription');
+});
